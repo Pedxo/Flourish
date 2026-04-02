@@ -11,6 +11,10 @@ const garamond = EB_Garamond({
 export const metadata: Metadata = {
   title: "Flourish- Design and creative collective for industries",
   description: "Flourish is a creative collective.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

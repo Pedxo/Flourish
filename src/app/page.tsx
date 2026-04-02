@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 function ScrollReveal({ 
   children, 
@@ -68,7 +69,19 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen justify-between p-8 md:p-16 lg:p-24 w-full max-w-[1400px] mx-auto overflow-hidden">
-      <header className="flex z-10 fade-in" style={{ animationDelay: "0.1s" }}>
+      {/* Header */}
+      <header className="flex items-center justify-between z-10 fade-in" style={{ animationDelay: "0.1s" }}>
+        <div className="flex items-center gap-3">
+          <Image
+            src="/logo.png"
+            alt="Flourish logo"
+            width={40}
+            height={40}
+            className="object-contain"
+            priority
+          />
+          <span className="text-base font-serif font-medium tracking-tight">Flourish</span>
+        </div>
         <p className="text-xs md:text-sm tracking-[0.2em] uppercase font-sans text-neutral-500 font-medium">
           Powered by <a href="https://pedxo.com" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors hover:border-black border-b border-transparent pb-[2px]">pedxo</a>
         </p>
@@ -103,7 +116,7 @@ export default function Home() {
         <div>
           <a href="mailto:career@pedxo.com" className="text-black hover:opacity-60 transition-opacity flex items-center group">
             <span className="border-b border-transparent group-hover:border-current pb-0.5">career@pedxo.com</span>
-            <span className="ml-2 opacity-50 text-xs sm:text-sm italic">(apply to be a creative talent)</span>
+            <span className="ml-2 opacity-50 text-xs sm:text-sm italic">(apply as a creative talent)</span>
           </a>
         </div>
         
