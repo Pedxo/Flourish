@@ -1,32 +1,50 @@
 import type { Metadata } from "next";
-import { EB_Garamond } from "next/font/google";
+import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const garamond = EB_Garamond({ 
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: '--font-serif',
-  weight: ['400', '500', '600']
+  variable: "--font-fraunces",
+  weight: ["300", "500", "600"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "500", "600"],
+  display: "swap",
+});
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  variable: "--font-plex-mono",
+  weight: ["400", "500"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Flourish- Design and creative collective for industries",
-  description: "Flourish is a creative collective.",
+  title: "Flourish — design and creative collective",
+  description: "Flourish is a design and creative collective of industries",
   icons: {
     icon: "/logo.png",
+    shortcut: "/logo.png",
     apple: "/logo.png",
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={`${garamond.variable} antialiased selection:bg-black selection:text-white`}>
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`${fraunces.variable} ${inter.variable} ${plexMono.variable}`}
+    >
+      <body style={{ margin: 0 }}>{children}</body>
     </html>
   );
 }
