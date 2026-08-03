@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
+import Images from "./logo.png";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -28,9 +29,9 @@ export const metadata: Metadata = {
   title: "Flourish — design and creative collective",
   description: "Flourish is a design and creative collective of industries",
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "./logo.png",
+    shortcut: "./logo.png",
+    apple: "./logo.png",
   },
 };
 
