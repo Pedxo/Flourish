@@ -27,10 +27,10 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "Flourish — design and creative collective",
   description: "Flourish is a design and creative collective for industries",
-   icons: {
-    icon: "/logo.png", // If placed in public folder
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+  icons: {
+    icon: { url: "/logo.png", sizes: "32x32", type: "image/png" },
+    shortcut: { url: "/logo.png", sizes: "32x32", type: "image/png" },
+    apple: { url: "/logo.png", sizes: "32x32", type: "image/png" },
   },
 };
 
