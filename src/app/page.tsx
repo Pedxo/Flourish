@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Logo from "./logo.png"
 
 /* ── Reveal-on-scroll (same mechanism as before, respects reduced motion) */
 function ScrollReveal({
@@ -195,12 +196,12 @@ export default function Home() {
         }
       `}</style>
 
-      <div className="flex flex-col min-h-screen justify-between p-6 sm:p-8 md:p-16 lg:p-24 w-full max-w-[1400px] mx-auto">
+      <div className="flex flex-col min-h-screen justify-between p-6 sm:p-8 md:p-16 lg:p-24 w-full max-w-350 mx-auto">
         {/* Header */}
         <header className="flex items-center justify-between z-10 shrink-0">
           <div className="flex items-center gap-3">
             <Image
-              src="/logo.png"
+              src= {Logo}
               alt="Flourish logo"
               width={36}
               height={36}
